@@ -438,7 +438,6 @@ body{
   pointer-events:auto;
 }
 
-/* POPUP BOX */
 .popup-box{
   background:#1c1a17;
   padding:35px 40px;
@@ -465,6 +464,7 @@ body{
   font-weight:600;
   cursor:pointer;
 }
+
 
 /* ANIMATION */
 @keyframes popupScale{

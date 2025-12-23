@@ -179,15 +179,25 @@
     <h2>Reserve Your Table</h2>
     <p>Experience fine dining like never before</p>
 
-    <form>
+    <form id="reserveForm">
       <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email Address">
-      <input type="date">
-      <input type="time">
-      <button>Book Now</button>
+      <input type="email" placeholder="Email Address" required>
+      <input type="date" required>
+      <input type="time" required>
+      <button type="submit">Book Now</button>
     </form>
   </div>
 </section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <h2>✅ Successfully Booked!</h2>
+    <p>Your table has been reserved.</p>
+    <button id="closePopup">OK</button>
+  </div>
+</div>
+
 <section class="gallery" id="gallery">
   <h2>Our Gallery</h2>
   <p>A glimpse of our luxurious atmosphere</p>
