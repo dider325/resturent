@@ -67,6 +67,10 @@ body{
   color:#fff;
   text-decoration:none;
   font-size:15px;
+  transition: all 0.1s;
+}
+.nav-desktop a:hover{
+  color: gold;
 }
 
 .reserve{
@@ -74,6 +78,9 @@ body{
   border:1px solid #d4af37;
   border-radius:20px;
 
+}
+.reserve:hover{
+   box-shadow:0 4px 60px rgba(185, 161, 20, 0.616)
 }
 
 /* HAMBURGER */
@@ -95,7 +102,10 @@ body{
 .nav-mobile a{
   color: #fff;
   text-decoration: none;
-
+  transition: all 0.1s;
+}
+.nav-mobile a:hover{
+  color: gold;
 }
 
 /* 👉 TABLET + MOBILE */
