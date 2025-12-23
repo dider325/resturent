@@ -166,13 +166,21 @@
     </div>
   </div>
 </section>
+<div class="popup" id="successPopup">
+  <div class="popup-box">
+    <h2>✅ Successfully Booked</h2>
+    <p>Your table has been reserved successfully.</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
 <section class="reservation" id="reserve">
   <div class="reserve-box">
     <h2>Reserve Your Table</h2>
     <p>Experience fine dining like never before</p>
 
     <form>
-      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Email Address">
       <input type="date">
       <input type="time">
@@ -269,6 +277,21 @@ hamburger.addEventListener("click",()=>{
   navMobile.classList.toggle("show");
 });
 </script>
+<script>
+const reservationForm = document.getElementById("reserve");
+const successPopup = document.getElementById("successPopup");
+
+reservationForm.addEventListener("submit", function(e){
+  e.preventDefault();        // reload বন্ধ
+  successPopup.classList.add("show");
+  reservationForm.reset();  // form clear
+});
+
+function closePopup(){
+  successPopup.classList.remove("show");
+}
+</script>
+
 
 
 </body>
