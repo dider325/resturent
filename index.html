@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section id="home">
+  <section class="hero-nav" id="home">
  <header class="navbar">
   <div class="nav-inner">
     <div class="logo">ROYAL DINE</div>
@@ -38,6 +38,19 @@
     <a href="#reserve">Reserve</a>
   </nav>
 </header>
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Royal Dining Experience</h1>
+    <p>
+      Indulge in a world of fine flavors, elegant ambiance and unforgettable
+      moments crafted by master chefs.
+    </p>
+    <a href="#reserve" class="hero-btn">Reserve Your Table</a>
+  </div>
+</section>
+
 
 </section>
   <!-- custom cursor -->
@@ -166,14 +179,6 @@
     </div>
   </div>
 </section>
-<div class="popup" id="successPopup">
-  <div class="popup-box">
-    <h2>✅ Successfully Booked</h2>
-    <p>Your table has been reserved successfully.</p>
-    <button onclick="closePopup()">OK</button>
-  </div>
-</div>
-
 <section class="reservation" id="reserve">
   <div class="reserve-box">
     <h2>Reserve Your Table</h2>
@@ -230,17 +235,47 @@
   </div>
 </section>
 <footer class="footer">
-  <div class="footer-content">
-    <h3>Royal Dine</h3>
-    <p>Luxury dining crafted for unforgettable moments.</p>
+  <div class="footer-container">
 
-    <div class="socials">
-      <span>🌐</span>
-      <span>📸</span>
-      <span>📘</span>
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h2>ROYAL DINE</h2>
+      <p>
+        A luxury dining destination where taste, elegance and comfort come together.
+      </p>
     </div>
 
-    <small>© 2025 Royal Dine. All Rights Reserved.</small>
+    <!-- CONTACT -->
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>📍 Gulshan, Dhaka, Bangladesh</p>
+      <p>📞 +880 1XXX-XXXXXX</p>
+      <p>✉️ info@elitedining.com</p>
+    </div>
+
+    <!-- OPEN HOURS -->
+    <div class="footer-section">
+      <h3>Opening Hours</h3>
+      <p>Monday – Friday: 5:00 PM – 11:00 PM</p>
+      <p>Saturday – Sunday: 1:00 PM – 11:30 PM</p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-section">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reserve">Reservation</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2025 Royal Dine. All Rights Reserved.</p>
   </div>
 </footer>
 
@@ -301,6 +336,31 @@ function closePopup(){
   successPopup.classList.remove("show");
 }
 </script>
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll(){
+    reveals.forEach(el=>{
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 120;
+
+      if(elementTop < windowHeight - revealPoint){
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
+<script>
+  window.addEventListener("load",()=>{
+    document.querySelector(".hero-content").classList.add("show");
+  });
+</script>
+
+
 
 
 
